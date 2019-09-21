@@ -1,0 +1,145 @@
+<h1>Gleb Kuzmin</h1>
+<h2>cv</h2>
+
+<h3>Contact Info</h3>
+**phone:** +7-916-251-40-83
+**email:** kuzmingn@mail.ru
+
+<h3> Summary</h3>
+<p>
+It is important to me to improve my skills in front-end development, such as JavaScript, modern layout technologies (i.e. HTML5, CSS3), React.  I have some experience in WEB-development, text-mining and data analytics.
+</p>
+
+<h3> Skills </h3>
+<ul>
+<li> Programming languages: </li>
+<ul>
+  <li> R </li>
+  <li> PHP </li>
+  <li> C# </li>
+  </ul>
+  <li>Database:</li>
+  <ul>
+  <li> SQL</li>
+  <li> Postgres</li>
+  <li> MySQL</li>
+  <li> Postgres </li>
+  </ul>
+<li> Web:</li>
+<ul>
+  <li> HTML</li>
+  <li> CSS</li>
+  <li> jQuery</li>
+  </ul>
+<li> Version control:</li>
+<ul>
+  <li> GitHub </li>
+  </ul>
+<li> Other:</li>
+<ul>
+  <li> Google Spreadsheets</li>
+  <li> Microsoft Excel</li>
+  <li> TeX</li>
+  </ul>
+</ul>
+
+<h3> Code examples </h3>
+
+<code>
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		int n = Int32.Parse(Console.ReadLine());
+            string line;
+            bool[,] matrix = new bool[n,n];
+            int[,] min_way = new int[n,n];
+            string[,] min_path = new string[n,n];
+            for (int i=0; i < n; i++)
+            {
+                line = Console.ReadLine();
+                string[] row = line.Split(' ');
+                for (int j=0; j < n; j++)
+                {
+                    if (row[j] == "1") 
+                    {
+                        matrix[i, j] = true;
+                        min_way[i, j] = 1;
+						if (i == j) {min_path[i, j] = (i+1).ToString();}
+                        else {min_path[i, j] = (i+1) + " " + (j+1);}
+                    }
+                    else
+                    {
+                        matrix[i, j] = false;
+                        min_way[i, j] = -1;
+                        min_path[i, j] = "";
+                    }
+                }
+            }
+            
+		int cur_way = 0;
+		string cur_path = "";
+		for (int k=0; k<n; k++)
+		{
+			for (int i=0; i < n; i++)
+            {
+                for (int j=0; j < n; j++)
+                {
+					if (min_way[i,j]>0)
+					{
+						cur_way = min_way[i,j];
+						cur_path = min_path[i,j];
+						for (int l=0; l<n; l++)
+						{
+							if (matrix[j,l])
+							{
+								if (((cur_way + 1) < min_way[i,l]) || (min_way[i,l] == -1))
+								{
+									min_way[i,l] = cur_way + 1;
+									min_path[i,l] = cur_path + " " + (l+1);
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+				
+            string input = Console.ReadLine();
+            string[] nums = input.Split(' ');
+            int start = Int32.Parse(nums[0]);
+            int finish = Int32.Parse(nums[1]); 
+
+            Console.WriteLine(min_way[start-1, finish-1]);
+            if (min_way[start-1, finish-1] > 0) {
+                Console.WriteLine(min_path[start-1, finish-1]);
+            }
+	}
+}
+</code>
+
+<h3> Experience </h3>
+<ol>
+<li>Free Analitic Network connected to IPChain _(PHP+SQL)_ </li>
+<li>[HSE competency map](https://www.hse.ru/info/competence) _(R+SQL)_</li>
+<li>HSE research and development accounting system _(PHP+SQL)_</li>
+<li>Web site of Investment broker company _(PHP+SQL)_</li>
+</ol>
+
+<h3> Education </h3>
+<p>
+__HSE__ _2018_ Data culture. Lecture  <br>
+__HSE__ _2015_ Econometrics. Online course  <br>
+__Specialist__ _2014_ Creating an effective presentations in  Microsoft PowerPoint. Course  <br>
+__HSE__ _2012_  English cources Upper-Intermidiate level. Course  <br>
+__PM Expert__ _2011_ Basic course of PMI PMBOK Guide 4th edition Управление проектами. Course  <br>
+__Mashav, Israel__ _2010_ Management of Higher Education,  Science and Innovations. Course  <br>
+__Moscow Aviation Institute__ _2007_ Applied mathematics. Degree<br>
+</p>
+
+<h3> English </h3>
+<p>
+__UNIDO, Veinna, Austria__ _2019_ Internship. Work with international colleagues. Working language: English
+</p>
