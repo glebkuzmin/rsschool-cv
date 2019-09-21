@@ -3,6 +3,10 @@
   max-width: 1024px;
 }
 
+.photo {
+  margin: 0 auto;
+}
+
 pre.cscode {
   margin:0em; overflow:auto; background-color:#ffffff;
 }
