@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-	  <meta charset="utf-8">
+	<meta charset="utf-8">
   	<title>CV Gleb Kuzmin</title>
+	<link rel="stylesheet" href="style.css">
   </head>
 	
   <body>
@@ -58,83 +59,79 @@ It is important to me to improve my skills in front-end development, such as Jav
 
 <h3> Code examples </h3>
 
-<code>
-<pre>
-using System;
-					
-public class Program
+<pre class="cscode"><code><span class="key">using</span> System;
+                    
+<span class="key">public</span> <span class="key">class</span> Program
 {
-	public static void Main()
-	{
-		int n = Int32.Parse(Console.ReadLine());
-        	string line;
-            	bool[,] matrix = new bool[n,n];
-            	int[,] min_way = new int[n,n];
-            	string[,] min_path = new string[n,n];
-            	for (int i=0; i < n; i++)
-            	{
-                	line = Console.ReadLine();
-                	string[] row = line.Split(' ');
-                	for (int j=0; j < n; j++)
-			{
-                    		if (row[j] == "1") 
-                    		{
-                        		matrix[i, j] = true;
-                        		min_way[i, j] = 1;
-					if (i == j) {min_path[i, j] = (i+1).ToString();}
-                        		else {min_path[i, j] = (i+1) + " " + (j+1);}
-                    		}
-                    		else
-                    		{
-                        		matrix[i, j] = false;
-                        		min_way[i, j] = -1;
-                        		min_path[i, j] = "";
-                    		}
-                	}
-            	}
+    <span class="key">public</span> <span class="key">static</span> <span class="key">void</span> Main()
+    {
+        <span class="key">int</span> n = Int32.Parse(Console.ReadLine());
+            <span class="key">string</span> line;
+                <span class="key">bool</span>[,] matrix = <span class="key">new</span> <span class="key">bool</span>[n,n];
+                <span class="key">int</span>[,] min_way = <span class="key">new</span> <span class="key">int</span>[n,n];
+                <span class="key">string</span>[,] min_path = <span class="key">new</span> <span class="key">string</span>[n,n];
+                <span class="key">for</span> (<span class="key">int</span> i=0; i &lt; n; i++)
+                {
+                    line = Console.ReadLine();
+                    <span class="key">string</span>[] row = line.Split(<span class="str">' '</span>);
+                    <span class="key">for</span> (<span class="key">int</span> j=0; j &lt; n; j++)
+            {
+                            <span class="key">if</span> (row[j] == <span class="str">"1"</span>) 
+                            {
+                                matrix[i, j] = <span class="key">true</span>;
+                                min_way[i, j] = 1;
+                    <span class="key">if</span> (i == j) {min_path[i, j] = (i+1).ToString();}
+                                <span class="key">else</span> {min_path[i, j] = (i+1) + <span class="str">" "</span> + (j+1);}
+                            }
+                            <span class="key">else</span>
+                            {
+                                matrix[i, j] = <span class="key">false</span>;
+                                min_way[i, j] = -1;
+                                min_path[i, j] = <span class="str">""</span>;
+                            }
+                    }
+                }
             
-		int cur_way = 0;
-		string cur_path = "";
-		for (int k=0; k<n; k++)
-		{
-			for (int i=0; i < n; i++)
-            		{
-                		for (int j=0; j < n; j++)
-                		{
-					if (min_way[i,j]>0)
-					{
-						cur_way = min_way[i,j];
-						cur_path = min_path[i,j];
-						for (int l=0; l<n; l++)
-						{
-							if (matrix[j,l])
-							{
-								if (((cur_way + 1) < min_way[i,l]) || (min_way[i,l] == -1))
-								{
-									min_way[i,l] = cur_way + 1;
-									min_path[i,l] = cur_path + " " + (l+1);
-								}
-							}
-						}
-					}
-				}
-			}
-		}
-				
-            	string input = Console.ReadLine();
-            	string[] nums = input.Split(' ');
-            	int start = Int32.Parse(nums[0]);
-            	int finish = Int32.Parse(nums[1]); 
+        <span class="key">int</span> cur_way = 0;
+        <span class="key">string</span> cur_path = <span class="str">""</span>;
+        <span class="key">for</span> (<span class="key">int</span> k=0; k&lt;n; k++)
+        {
+            <span class="key">for</span> (<span class="key">int</span> i=0; i &lt; n; i++)
+                    {
+                        <span class="key">for</span> (<span class="key">int</span> j=0; j &lt; n; j++)
+                        {
+                    <span class="key">if</span> (min_way[i,j]&gt;0)
+                    {
+                        cur_way = min_way[i,j];
+                        cur_path = min_path[i,j];
+                        <span class="key">for</span> (<span class="key">int</span> l=0; l&lt;n; l++)
+                        {
+                            <span class="key">if</span> (matrix[j,l])
+                            {
+                                <span class="key">if</span> (((cur_way + 1) &lt; min_way[i,l]) || (min_way[i,l] == -1))
+                                {
+                                    min_way[i,l] = cur_way + 1;
+                                    min_path[i,l] = cur_path + <span class="str">" "</span> + (l+1);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+                
+                <span class="key">string</span> input = Console.ReadLine();
+                <span class="key">string</span>[] nums = input.Split(<span class="str">' '</span>);
+                <span class="key">int</span> start = Int32.Parse(nums[0]);
+                <span class="key">int</span> finish = Int32.Parse(nums[1]); 
 
-            	Console.WriteLine(min_way[start-1, finish-1]);
-            	if (min_way[start-1, finish-1] > 0) 
-		{
-                	Console.WriteLine(min_path[start-1, finish-1]);
-            	}
-	}
-}
-</pre>
-</code>
+                Console.WriteLine(min_way[start-1, finish-1]);
+                <span class="key">if</span> (min_way[start-1, finish-1] &gt; 0) 
+        {
+                    Console.WriteLine(min_path[start-1, finish-1]);
+                }
+    }
+}</code></pre>
 
 <h3> Experience </h3>
 <ol>
