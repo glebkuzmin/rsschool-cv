@@ -116,11 +116,11 @@ Also it would be awesome if you add links to source code)
 ### Education 
 __HSE__ _2018_ Data culture. Lecture  
 __HSE__ _2015_ Econometrics. Online course  
-__Specialist__ _2014_: Creating an effective presentations in  Microsoft PowerPoint. Course  
+__Specialist__ _2014_ Creating an effective presentations in  Microsoft PowerPoint. Course  
 __HSE__ _2012_  English cources Upper-Intermidiate level. Course  
 __PM Expert__ _2011_ Basic course of PMI PMBOK Guide 4th edition Управление проектами. Course  
-__Mashav, *Israel*__ _2010_ Management of Higher Education,  Science and Innovations. Course  
+__Mashav, Israel__ _2010_ Management of Higher Education,  Science and Innovations. Course  
 __Moscow Aviation Institute__ _2007_ Applied mathematics. Degree
 
 ### English 
-__UNIDO, *Veinna, Austria*__ _2019_ Internship. Work with international colleagues. Working language: English
+__UNIDO, Veinna, Austria__ _2019_ Internship. Work with international colleagues. Working language: English
