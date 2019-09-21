@@ -6,9 +6,7 @@
 **email:** kuzmingn@mail.ru
 
 ### Summary
-our goal, wishes, reveal what is important for you, what do you want and why.
-Some kind of self-presentation. In case of lack of experience  Junior Developer sells his/her potential, his/her passion and ability to learn fast. You shouldn't think that everybody is going to teach you when you come to the workplace . Rather being a Junior means always
-learning new things from everywhere etc.
+It is important to me to improve my skills in front-end development, such as JavaScript, modern layout technologies (i.e. HTML5, CSS3), React.  I have some experience in WEB-development, text-mining and data analytics.
 
 ### Skills 
 - Programming languages:
@@ -23,10 +21,11 @@ learning new things from everywhere etc.
 - Web:
   - HTML
   - CSS
+  - jQuery
 - Version control:
   - GitHub 
 - Other:
-  - Google Spreadshhets
+  - Google Spreadsheets
   - Microsoft Excel
   - TeX
 
@@ -107,11 +106,11 @@ public class Program
 }
 ```
 
-
 ### Experience 
-(for a Junior Dev it means all kinds of experience: coding tests, projects from courses,
-freelance projects - wherever they had the opportunity to demonstrate skills they have.
-Also it would be awesome if you add links to source code)
+1. Free Analitic Network connected to IPChain _(PHP+SQL)_
+1. [HSE competency map](https://www.hse.ru/info/competence) _(R+SQL)_
+1. HSE research and development accounting system _(PHP+SQL)_
+1. Web site of Investment broker company _(PHP+SQL)_
 
 ### Education 
 __HSE__ _2018_ Data culture. Lecture  
