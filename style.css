@@ -1,0 +1,29 @@
+.main {
+  margin: 0 auto;
+  max-width: 1024px;
+}
+
+.photo {
+  margin: 0 auto;
+  width: fit-content;
+}
+
+pre.cscode {
+  margin:0em; overflow:auto; background-color:#ffffff;
+}
+
+.cscode code {
+  font-family:Consolas,"Courier New",Courier,Monospace; font-size:10pt; color:#000000;
+}
+
+.cscode .key {
+  color:#0000ff;
+}
+
+.cscode .com {
+  color:#008000;
+}
+
+.cscode .str {
+  color:#a31515;
+}

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<meta charset="utf-8">
+  	<title>CV Gleb Kuzmin</title>
+	<link rel="stylesheet" href="style.css">
+  </head>
+	
+  <body>
+	  <article class="main">
+		  <h1>Gleb Kuzmin</h1>
+		  <figure class="photo">
+			  <img src="glebkuzmin.jpg" alt="Gleb Kuzmin" width="300" height="200">
+		</figure>
+		  
+<h2>cv</h2>
+
+<h3>Contact Info</h3>
+<strong>phone:</strong> +7-916-251-40-83
+<strong>email:</strong> kuzmingn@mail.ru
+
+<h3> Summary</h3>
+<p>
+It is important to me to improve my skills in front-end development, such as JavaScript, modern layout technologies (i.e. HTML5, CSS3), React.  I have some experience in WEB-development, text-mining and data analytics.
+</p>
+
+<h3> Skills </h3>
+<ul>
+	<li> Programming languages: 
+		<ul>
+  			<li> R </li>
+  			<li> PHP </li>
+  			<li> C# </li>
+  		</ul>
+	</li>
+  	<li>Database:
+  		<ul>
+			<li> SQL</li>
+			<li> Postgres</li>
+			<li> MySQL</li>
+			<li> Postgres </li>
+  		</ul>
+	</li>
+	<li> Web:
+		<ul>
+		 	<li> HTML</li>
+		  	<li> CSS</li>
+		  	<li> jQuery</li>
+		</ul>
+	</li>
+	<li> Version control:
+		<ul>
+		 	<li> GitHub </li>
+		</ul>
+	</li>
+	<li> Other:
+		<ul>
+			  <li> Google Spreadsheets</li>
+			  <li> Microsoft Excel</li>
+			  <li> TeX</li>
+		</ul>
+	</li>
+</ul>
+
+<h3> Code examples </h3>
+
+<pre class="cscode"><code><span class="key">using</span> System;
+                    
+<span class="key">public</span> <span class="key">class</span> Program
+{
+    <span class="key">public</span> <span class="key">static</span> <span class="key">void</span> Main()
+    {
+        <span class="key">int</span> n = Int32.Parse(Console.ReadLine());
+            <span class="key">string</span> line;
+                <span class="key">bool</span>[,] matrix = <span class="key">new</span> <span class="key">bool</span>[n,n];
+                <span class="key">int</span>[,] min_way = <span class="key">new</span> <span class="key">int</span>[n,n];
+                <span class="key">string</span>[,] min_path = <span class="key">new</span> <span class="key">string</span>[n,n];
+                <span class="key">for</span> (<span class="key">int</span> i=0; i &lt; n; i++)
+                {
+                    line = Console.ReadLine();
+                    <span class="key">string</span>[] row = line.Split(<span class="str">' '</span>);
+                    <span class="key">for</span> (<span class="key">int</span> j=0; j &lt; n; j++)
+            {
+                            <span class="key">if</span> (row[j] == <span class="str">"1"</span>) 
+                            {
+                                matrix[i, j] = <span class="key">true</span>;
+                                min_way[i, j] = 1;
+                    <span class="key">if</span> (i == j) {min_path[i, j] = (i+1).ToString();}
+                                <span class="key">else</span> {min_path[i, j] = (i+1) + <span class="str">" "</span> + (j+1);}
+                            }
+                            <span class="key">else</span>
+                            {
+                                matrix[i, j] = <span class="key">false</span>;
+                                min_way[i, j] = -1;
+                                min_path[i, j] = <span class="str">""</span>;
+                            }
+                    }
+                }
+            
+        <span class="key">int</span> cur_way = 0;
+        <span class="key">string</span> cur_path = <span class="str">""</span>;
+        <span class="key">for</span> (<span class="key">int</span> k=0; k&lt;n; k++)
+        {
+            <span class="key">for</span> (<span class="key">int</span> i=0; i &lt; n; i++)
+                    {
+                        <span class="key">for</span> (<span class="key">int</span> j=0; j &lt; n; j++)
+                        {
+                    <span class="key">if</span> (min_way[i,j]&gt;0)
+                    {
+                        cur_way = min_way[i,j];
+                        cur_path = min_path[i,j];
+                        <span class="key">for</span> (<span class="key">int</span> l=0; l&lt;n; l++)
+                        {
+                            <span class="key">if</span> (matrix[j,l])
+                            {
+                                <span class="key">if</span> (((cur_way + 1) &lt; min_way[i,l]) || (min_way[i,l] == -1))
+                                {
+                                    min_way[i,l] = cur_way + 1;
+                                    min_path[i,l] = cur_path + <span class="str">" "</span> + (l+1);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+                
+                <span class="key">string</span> input = Console.ReadLine();
+                <span class="key">string</span>[] nums = input.Split(<span class="str">' '</span>);
+                <span class="key">int</span> start = Int32.Parse(nums[0]);
+                <span class="key">int</span> finish = Int32.Parse(nums[1]); 
+
+                Console.WriteLine(min_way[start-1, finish-1]);
+                <span class="key">if</span> (min_way[start-1, finish-1] &gt; 0) 
+        {
+                    Console.WriteLine(min_path[start-1, finish-1]);
+                }
+    }
+}</code></pre>
+
+<h3> Experience </h3>
+<ol>
+	<li>Free Analitic Network connected to IPChain <i>(PHP+SQL)</i></li>
+	<li><a href="https://www.hse.ru/info/competence" target="_blank">HSE competency map</a><i>(R+SQL)</i></li>
+	<li>HSE research and development accounting system <i>(PHP+SQL)</i></li>
+	<li>Web site of Investment broker company <i>(PHP+SQL)</i></li>
+</ol>
+
+<h3> Education </h3>
+<p>
+	<strong>HSE</strong> <i>2018</i> Data culture. Lecture  <br>
+	<strong>HSE</strong> <i>2015</i> Econometrics. Online course  <br>
+	<strong>Specialist</strong> <i>2014</i> Creating an effective presentations in  Microsoft PowerPoint. Course  <br>
+	<strong>HSE</strong> <i>2012</i>  English cources Upper-Intermidiate level. Course  <br>
+	<strong>PM Expert</strong> <i>2011</i> Basic course of PMI PMBOK Guide 4th edition Управление проектами. Course  <br>
+	<strong>Mashav, Israel</strong> <i>2010</i> Management of Higher Education,  Science and Innovations. Course  <br>
+	<strong>Moscow Aviation Institute</strong> <i>2007</i> Applied mathematics. Degree<br>
+</p>
+
+<h3> English </h3>
+<p>
+<strong>UNIDO, Veinna, Austria</strong> <i>2019</i> Internship. Work with international colleagues. Working language: English
+</p>
+	  </article>
+</body>
+</html>
