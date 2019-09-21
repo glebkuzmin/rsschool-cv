@@ -5,6 +5,7 @@
 
 .photo {
   margin: 0 auto;
+  width: fit-content;
 }
 
 pre.cscode {
