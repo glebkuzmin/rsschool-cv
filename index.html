@@ -54,40 +54,40 @@ public class Program
 	public static void Main()
 	{
 		int n = Int32.Parse(Console.ReadLine());
-            string line;
-            bool[,] matrix = new bool[n,n];
-            int[,] min_way = new int[n,n];
-            string[,] min_path = new string[n,n];
-            for (int i=0; i < n; i++)
-            {
-                line = Console.ReadLine();
-                string[] row = line.Split(' ');
-                for (int j=0; j < n; j++)
-                {
-                    if (row[j] == "1") 
-                    {
-                        matrix[i, j] = true;
-                        min_way[i, j] = 1;
-						if (i == j) {min_path[i, j] = (i+1).ToString();}
-                        else {min_path[i, j] = (i+1) + " " + (j+1);}
-                    }
-                    else
-                    {
-                        matrix[i, j] = false;
-                        min_way[i, j] = -1;
-                        min_path[i, j] = "";
-                    }
-                }
-            }
+        	string line;
+            	bool[,] matrix = new bool[n,n];
+            	int[,] min_way = new int[n,n];
+            	string[,] min_path = new string[n,n];
+            	for (int i=0; i < n; i++)
+            	{
+                	line = Console.ReadLine();
+                	string[] row = line.Split(' ');
+                	for (int j=0; j < n; j++)
+			{
+                    		if (row[j] == "1") 
+                    		{
+                        		matrix[i, j] = true;
+                        		min_way[i, j] = 1;
+					if (i == j) {min_path[i, j] = (i+1).ToString();}
+                        		else {min_path[i, j] = (i+1) + " " + (j+1);}
+                    		}
+                    		else
+                    		{
+                        		matrix[i, j] = false;
+                        		min_way[i, j] = -1;
+                        		min_path[i, j] = "";
+                    		}
+                	}
+            	}
             
 		int cur_way = 0;
 		string cur_path = "";
 		for (int k=0; k<n; k++)
 		{
 			for (int i=0; i < n; i++)
-            {
-                for (int j=0; j < n; j++)
-                {
+            		{
+                		for (int j=0; j < n; j++)
+                		{
 					if (min_way[i,j]>0)
 					{
 						cur_way = min_way[i,j];
@@ -108,15 +108,16 @@ public class Program
 			}
 		}
 				
-            string input = Console.ReadLine();
-            string[] nums = input.Split(' ');
-            int start = Int32.Parse(nums[0]);
-            int finish = Int32.Parse(nums[1]); 
+            	string input = Console.ReadLine();
+            	string[] nums = input.Split(' ');
+            	int start = Int32.Parse(nums[0]);
+            	int finish = Int32.Parse(nums[1]); 
 
-            Console.WriteLine(min_way[start-1, finish-1]);
-            if (min_way[start-1, finish-1] > 0) {
-                Console.WriteLine(min_path[start-1, finish-1]);
-            }
+            	Console.WriteLine(min_way[start-1, finish-1]);
+            	if (min_way[start-1, finish-1] > 0) 
+		{
+                	Console.WriteLine(min_path[start-1, finish-1]);
+            	}
 	}
 }
 </pre>
